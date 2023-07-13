@@ -10,6 +10,7 @@ import fi.dy.masa.malilib.config.IConfigHandler;
 import fi.dy.masa.malilib.config.options.ConfigBoolean;
 import fi.dy.masa.malilib.config.options.ConfigColor;
 import fi.dy.masa.malilib.config.options.ConfigDouble;
+import fi.dy.masa.malilib.config.options.ConfigHotkey;
 import fi.dy.masa.malilib.util.FileUtils;
 import fi.dy.masa.malilib.util.JsonUtils;
 import net.devcube.chattwix.ModInfo;
@@ -24,6 +25,8 @@ public class Configs implements IConfigHandler {
         public static final ConfigBoolean CLOSE_AFTER_SEND = new ConfigBoolean("chattwix.option.close_after_send", true, "chattwix.option.close_after_send.desc");
         public static final ConfigBoolean PLAY_MSG_SOUND = new ConfigBoolean("chattwix.option.play_msg_sound", false, "chattwix.option.play_msg_sound.desc");
         public static final ConfigDouble MSG_SOUND_VOLUME = new ConfigDouble("chattwix.option.msg_sound_volume", 0.5, 0.0, 1.0, "chattwix.option.msg_sound_volume.desc");
+
+
 
         public static final ImmutableList<IConfigBase> OPTIONS = ImmutableList.of(
                 CLOSE_AFTER_SEND,
@@ -42,7 +45,12 @@ public class Configs implements IConfigHandler {
                 MSG_COLOR);
     }
 
+    public static class HotKeys{
+        public static final ConfigHotkey OPEN_CONFIG_GUI = new ConfigHotkey("chattwix.option.key.open_gui", "U,C", "chattwix.option.key.open_gui.desc");
 
+        public static final ImmutableList<ConfigHotkey> HOTKEYS_LIST = ImmutableList.of(
+                OPEN_CONFIG_GUI);
+    }
 
     @Override
     public void load() {
@@ -57,6 +65,7 @@ public class Configs implements IConfigHandler {
                 JsonObject root = element.getAsJsonObject();
                 ConfigUtils.readConfigBase(root, "Generic", Configs.Generic.OPTIONS);
                 ConfigUtils.readConfigBase(root, "Style", Configs.Style.OPTIONS);
+                ConfigUtils.readConfigBase(root, "HotKeys", Configs.HotKeys.HOTKEYS_LIST);
 
             }
         }
@@ -71,6 +80,7 @@ public class Configs implements IConfigHandler {
             JsonObject root = new JsonObject();
             ConfigUtils.writeConfigBase(root, "Generic", Configs.Generic.OPTIONS);
             ConfigUtils.writeConfigBase(root, "Style", Configs.Style.OPTIONS);
+            ConfigUtils.writeConfigBase(root, "HotKeys", Configs.HotKeys.HOTKEYS_LIST);
             root.add("config_version", new JsonPrimitive(ModInfo.MOD_VERSION));
             JsonUtils.writeJsonToFile(root, new File(dir, CONFIG_FILE_NAME));
         }

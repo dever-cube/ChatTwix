@@ -13,5 +13,7 @@
 "chattwix.option.msg_italic.desc": "Личные сообщения выделяются курсивом",
 "chattwix.option.msg_color.desc": "Цвет личных сообщений",
 "chattwix.option.msg_sound_volume": "Громкость звука сообщения",
-"chattwix.option.msg_sound_volume.desc": "Громкость звука сообщения (Спасибо, кэп)"
+"chattwix.option.msg_sound_volume.desc": "Громкость звука сообщения (Спасибо, кэп)",
+"chattwix.option.key.open_gui": "Открыть настройки",
+"chattwix.option.key.open_gui.desc": "Хоткей для открытия меню настроки мода"
 }

@@ -72,6 +72,10 @@ public class ConfigsGui  extends GuiConfigsBase {
         {
             configs = Configs.Style.OPTIONS;
         }
+        else if (tab == ConfigGuiTab.HOT_KEYS)
+        {
+            configs = Configs.HotKeys.HOTKEYS_LIST;
+        }
         else
         {
             return Collections.emptyList();
@@ -82,8 +86,8 @@ public class ConfigsGui  extends GuiConfigsBase {
     public enum ConfigGuiTab
     {
         GENERIC ("chattwix.gui.button.config_gui.generic"),
-        STYLE ("chattwix.gui.button.config_gui.style");
-
+        STYLE ("chattwix.gui.button.config_gui.style"),
+        HOT_KEYS ("chattwix.gui.button.config_gui.hotkeys");
         private final String translationKey;
 
         public static final ImmutableList<ConfigGuiTab> VALUES = ImmutableList.copyOf(values());
