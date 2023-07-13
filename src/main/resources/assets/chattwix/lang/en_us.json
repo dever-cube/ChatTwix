@@ -15,5 +15,6 @@
 "chattwix.option.msg_sound_volume": "Message sound volume",
 "chattwix.option.msg_sound_volume.desc": "Message sound volume",
 "chattwix.option.key.open_gui": "Open settings",
-"chattwix.option.key.open_gui.desc": "Hotkey to open mod settings screen"
+"chattwix.option.key.open_gui.desc": "Hotkey to open mod settings screen",
+"chattwix.gui.button.config_gui.hotkeys": "Hotkeys"
 }
