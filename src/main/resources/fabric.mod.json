@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "chattwix",
+  "version": "${version}",
+
+  "name": "ChatTwix",
+  "description": "Make chat better",
+  "authors": [
+    "dev_cube"
+  ],
+  "contact": {},
+
+  "license": "MIT",
+  "icon": "assets/chattwix/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "net.devcube.chattwix.client.ChatTwixClient"
+    ]
+  },
+
+  "mixins": [
+    "chattwix.mixins.json"
+  ],
+    
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "minecraft": "1.20.*"
+  }
+}
