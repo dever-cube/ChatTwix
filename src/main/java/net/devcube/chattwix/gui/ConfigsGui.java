@@ -12,7 +12,6 @@ import net.devcube.chattwix.config.Configs;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
 
 public class ConfigsGui  extends GuiConfigsBase {
 
