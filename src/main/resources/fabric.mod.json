@@ -17,6 +17,9 @@
   "entrypoints": {
     "client": [
       "net.devcube.chattwix.client.ChatTwixClient"
+    ],
+    "modmenu": [
+      "net.devcube.chattwix.integration.ModMenuImplementation"
     ]
   },
 
