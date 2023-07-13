@@ -1,0 +1,17 @@
+{
+"chattwix.option.close_after_send": "Close after send",
+"chattwix.gui.button.config_gui.generic": "Generic",
+"chattwix.gui.title.configs": "Settings",
+"chattwix.option.play_msg_sound": "Play message sound",
+"chattwix.gui.button.config_gui.style": "Style",
+"chattwix.option.msg_bold": "Bold",
+"chattwix.option.msg_italic": "Italic",
+"chattwix.option.msg_color": "Color",
+"chattwix.option.close_after_send.desc": "Chat scree will stay opened after sending",
+"chattwix.option.play_msg_sound.desc": "Play sound when receive incoming private message",
+"chattwix.option.msg_bold.desc": "Make incoming private messages bold",
+"chattwix.option.msg_italic.desc": "Make incoming private messages italic",
+"chattwix.option.msg_color.desc": "Color of incoming private messages",
+"chattwix.option.msg_sound_volume": "Message sound volume",
+"chattwix.option.msg_sound_volume.desc": "Message sound volume"
+}

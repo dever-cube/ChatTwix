@@ -1,0 +1,17 @@
+{
+"chattwix.option.close_after_send": "Закрывать при отправке",
+"chattwix.gui.button.config_gui.generic": "Основные",
+"chattwix.gui.title.configs": "Настройки",
+"chattwix.option.play_msg_sound": "Звук входящего сообщения",
+"chattwix.gui.button.config_gui.style": "Оформление",
+"chattwix.option.msg_bold": "Жирный",
+"chattwix.option.msg_italic": "Наклон",
+"chattwix.option.msg_color": "Цвет",
+"chattwix.option.close_after_send.desc": "Оставлять чат открытым после отправки",
+"chattwix.option.play_msg_sound.desc": "Издавать звук входящего сообщения",
+"chattwix.option.msg_bold.desc": "Личные сообщения выделяются жирным",
+"chattwix.option.msg_italic.desc": "Личные сообщения выделяются курсивом",
+"chattwix.option.msg_color.desc": "Цвет личных сообщений",
+"chattwix.option.msg_sound_volume": "Громкость звука сообщения",
+"chattwix.option.msg_sound_volume.desc": "Громкость звука сообщения (Спасибо, кэп)"
+}
