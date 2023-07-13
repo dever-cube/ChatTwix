@@ -6,7 +6,8 @@
   "mixins": [
   ],
   "client": [
-    "ChatScreenMixin"
+    "ChatScreenMixin",
+    "MessageHandlerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
