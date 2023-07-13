@@ -30,6 +30,7 @@
   "depends": {
     "fabricloader": ">=0.14.21",
     "minecraft": "1.20.*",
-    "malilib": "0.16.x"
+    "malilib": "0.16.x",
+    "modmenu": ">=7.0.0"
   }
 }
