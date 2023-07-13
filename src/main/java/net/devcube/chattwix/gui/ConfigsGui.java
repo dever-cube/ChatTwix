@@ -1,13 +1,16 @@
 package net.devcube.chattwix.gui;
 
 import com.google.common.collect.ImmutableList;
+import fi.dy.masa.malilib.config.IConfigBase;
 import fi.dy.masa.malilib.gui.GuiConfigsBase;
 import fi.dy.masa.malilib.gui.button.ButtonBase;
 import fi.dy.masa.malilib.gui.button.ButtonGeneric;
 import fi.dy.masa.malilib.gui.button.IButtonActionListener;
 import fi.dy.masa.malilib.util.StringUtils;
 import net.devcube.chattwix.ModInfo;
+import net.devcube.chattwix.config.Configs;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -37,7 +40,7 @@ public class ConfigsGui  extends GuiConfigsBase {
             ConfigsGui.tab = this.tab;
 
             this.parent.reCreateListWidget(); // apply the new config width
-            Objects.requireNonNull(this.parent.getListWidget()).resetScrollbarPosition();
+            this.parent.getListWidget().resetScrollbarPosition();
             this.parent.initGui();
         }
     }
@@ -59,7 +62,22 @@ public class ConfigsGui  extends GuiConfigsBase {
 
     @Override
     public List<ConfigOptionWrapper> getConfigs() {
-        return null;
+        List<? extends IConfigBase> configs;
+        ConfigGuiTab tab = ConfigsGui.tab;
+
+        if (tab == ConfigGuiTab.GENERIC)
+        {
+            configs = Configs.Generic.OPTIONS;
+        }
+        else if (tab == ConfigGuiTab.STYLE)
+        {
+            configs = Configs.Style.OPTIONS;
+        }
+        else
+        {
+            return Collections.emptyList();
+        }
+        return ConfigOptionWrapper.createFor(configs);
     }
 
     public enum ConfigGuiTab
