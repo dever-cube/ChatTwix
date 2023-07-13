@@ -4,6 +4,7 @@
   "package": "net.devcube.chattwix.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "WidgetConfigOptionMixin"
   ],
   "client": [
     "ChatScreenMixin",

@@ -34,7 +34,7 @@ public class Configs implements IConfigHandler {
     public static class Style{
         public static final ConfigBoolean BOLD = new ConfigBoolean("chattwix.option.msg_bold", false, "chattwix.option.msg_bold.desc");
         public static final ConfigBoolean ITALIC = new ConfigBoolean("chattwix.option.msg_italic", true, "chattwix.option.msg_italic.desc");
-        public static final ConfigColor MSG_COLOR = new ConfigColor("chattwix.option.msg_color", "#AAAAAA", "chattwix.option.msg_color.desc");
+        public static final ConfigColor MSG_COLOR = new ConfigColorColorized("chattwix.option.msg_color", "#AAAAAA", "chattwix.option.msg_color.desc");
 
         public static final ImmutableList<IConfigBase> OPTIONS = ImmutableList.of(
                 BOLD,
